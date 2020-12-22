@@ -13,13 +13,7 @@ export default function Header() {
   const animated = useStartAnimation();
 
   return (
-    <div
-      id="header"
-      className="min-h-screen flex items-center justify-center"
-      style={{
-        background: "#091c29",
-      }}
-    >
+    <div id="header" className="min-h-screen flex items-center justify-center">
       <div className="flex flex-col items-center justify-center md:flex-row-reverse md:w-10/12 md:justify-between">
         <div className="w-full md:w-2/5">
           <LazyLoadImage
@@ -31,7 +25,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="font-dosis w-full md:w-3/5 text-center md:text-left">
+        <div className="w-full md:w-3/5 text-center md:text-left">
           <h2
             className={`text-3xl md:text-4xl lg:text-6xl text-white font-bold transform ${
               animated ? "translate-y-0" : styleTranslate
@@ -54,14 +48,12 @@ export default function Header() {
               wrapper="p"
             />
           </h1>
-          <ScrollLink to="myWork" smooth={true}>
-            <button
-              className={`animate-bounce bg-indigo-500 px-10 py-3 text-xl uppercase text-white rounded-lg mt-10 hover:bg-indigo-300 transform ${
-                animated ? "translate-y-0" : styleTranslate
-              } ${transition(3500)}`}
-            >
-              {content.header.btnText}
-            </button>
+          <ScrollLink
+            to="myWork"
+            smooth={true}
+            className="btn-style--gold mt-5"
+          >
+            {content.header.btnText}
           </ScrollLink>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import SmoothScroll from "smoothscroll-for-websites";
+import BackGround from "./components/BackGround";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -14,6 +15,7 @@ function App() {
   });
   return (
     <>
+      <BackGround />
       <Navigation />
       <Header />
       <Work />

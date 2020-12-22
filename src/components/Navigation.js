@@ -4,12 +4,7 @@ import content from "../content";
 
 export default function Navigation() {
   return (
-    <div
-      className="font-dosis fixed top-0 w-screen z-40"
-      style={{
-        background: "#091c29",
-      }}
-    >
+    <div className="fixed top-0 w-screen z-40">
       <div className="flex items-center w-10/12 mx-auto py-3">
         <ScrollLink
           to="header"

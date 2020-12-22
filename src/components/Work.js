@@ -11,12 +11,9 @@ export default function Work() {
     <div
       id="myWork"
       className="min-h-screen flex flex-col justify-center items-center"
-      style={{
-        background: "#FEFEFE",
-      }}
     >
-      <h1 className="text-5xl font-dosis font-bold">{content.work.title}</h1>
-      <p className="text-gray-600 text-2xl font-dosis mb-10">I have done</p>
+      <h1 className="text-5xl font-bold">{content.work.title}</h1>
+      <p className="text-gray-600 text-2xl mb-10">I have done</p>
       <div className="flex flex-col md:flex-row justify-between items-center w-11/12">
         <LazyLoadImage
           effect="blur"
@@ -51,14 +48,14 @@ const ProjectDetail = () => {
   return (
     <div>
       <h1
-        className={`transform transition duration-2000 inline-block m-4 font-dosis text-xl font-bold ${
+        className={`transform transition duration-2000 inline-block m-4 text-xl font-bold ${
           animated ? "" : "translate-y-10 opacity-0"
         }`}
       >
         {content.work.projectName}
       </h1>
       <p
-        className={`transform transition duration-2000 inline-block w-11/12 m-4 text-xl font-dosis ${
+        className={`transform transition duration-2000 inline-block w-11/12 m-4 text-xl ${
           animated ? "" : "translate-y-10 opacity-0"
         }`}
       >

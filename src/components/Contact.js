@@ -9,8 +9,8 @@ export default function Contact() {
 
   return (
     <div
-      className="min-h-screen flex justify-center items-center"
       id="myContact"
+      className="min-h-screen flex justify-center items-center"
     >
       <div
         style={{
@@ -27,7 +27,7 @@ export default function Contact() {
           width="300px"
           className="mt-10 transition duration-2000 ease-in-out mx-auto"
         />
-        <div className="font-dosis w-4/5 md:w-2/5 mt-5 transition duration-2000">
+        <div className="w-4/5 md:w-2/5 mt-5 transition duration-2000">
           <h1
             className={`transform transition duration-3000 text-white text-5xl font-bold ${
               animated ? "" : "translate-y-10 opacity-0"
