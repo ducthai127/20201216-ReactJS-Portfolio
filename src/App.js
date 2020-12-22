@@ -3,10 +3,12 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import SmoothScroll from "smoothscroll-for-websites";
 import About from "./components/About";
 import BackGround from "./components/BackGround";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
-import Stack from "./components/Stack";
-import Experience from "./components/Experience";
+import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
 
 function App() {
   SmoothScroll({
@@ -20,8 +22,10 @@ function App() {
       <Header />
       <About />
       <Experience />
+      <Skills />
+      <Education />
       <SimpleReactLightbox>
-        <Stack />
+        <Portfolio />
       </SimpleReactLightbox>
     </>
   );

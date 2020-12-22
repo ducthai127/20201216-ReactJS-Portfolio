@@ -1,19 +1,18 @@
 import React from "react";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import content from "../content";
 import useWindowPosition from "../hook/useWindowPosition";
 
 export default function Experience() {
-  const animated = useWindowPosition("myHeader", 0.6);
+  const animated = useWindowPosition("myHeader", 0.5, 2);
 
   return (
     <div
       id="myExp"
-      className="w-full lg:w-11/12 xl:w-10/12 mx-auto mb-16 px-6 flex flex-col items-center justify-center min-h-screen"
+      className="w-full lg:w-11/12 xl:w-10/12 mx-auto pt-16 px-6 flex flex-col items-center justify-center min-h-screen"
     >
       <h1
-        className={`uppercase transform transition duration-2000 text-5xl mb-10 md:mb-12 ${
-          animated ? "" : "translate-y-10 opacity-0"
+        className={`uppercase transform transition duration-2000 text-5xl mb-8 md:mb-10 ${
+          animated ? "" : "opacity-0"
         }`}
       >
         {content.exp.title}
@@ -22,7 +21,11 @@ export default function Experience() {
         return (
           <div
             key={index1}
-            className={`w-full pb-10 mb-10 job-wrap job-${index1 + 1}`}
+            className={`w-full pb-10 mb-10 job-wrap job-${
+              index1 + 1
+            } transform transition duration-2000 ${
+              animated ? "" : "opacity-0"
+            }`}
           >
             <div className="job-inner flex flex-col md:flex-row justify-between items-center mb-6">
               <h3 className="job-company txt-Montserrat--semibold text-3xl m-0 pr-12">

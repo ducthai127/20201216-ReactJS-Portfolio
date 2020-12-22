@@ -1,5 +1,4 @@
 import React from "react";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link as ScrollLink } from "react-scroll";
 import Typical from "react-typical";
 import content from "../content";
@@ -14,7 +13,7 @@ export default function Header() {
   return (
     <div
       id="myHeader"
-      className="w-full lg:w-11/12 xl:w-10/12 mx-auto mb-16 px-6 flex flex-col items-center justify-center min-h-screen"
+      className="w-full lg:w-11/12 xl:w-10/12 mx-auto px-6 flex flex-col items-center justify-center min-h-screen"
     >
       <div className="w-full text-center md:text-left">
         <h2
@@ -37,15 +36,34 @@ export default function Header() {
             wrapper="p"
           />
         </h1>
-        <ScrollLink
-          to="myWork"
-          smooth={true}
-          className={`btn-style--gold mt-5 ${
+        <p
+          className={`inline-block mt-6 ${
             animated ? "opacity-1" : styleFade
           } ${transition(1000, 300)}`}
         >
-          {content.header.btnText}
-        </ScrollLink>
+          <ScrollLink
+            to="myAbout"
+            smooth={true}
+            className="btn-style--green mr-12 animate-bounce"
+            style={{
+              animationDuration: "3s",
+              animationDelay: "1.2s",
+            }}
+          >
+            {content.header.btnScroll}
+          </ScrollLink>
+          <a
+            className="btn-style--gold animate-bounceFirst"
+            style={{
+              animationDuration: "3s",
+            }}
+            href={content.header.btnToCvPDF.href}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {content.header.btnToCvPDF.text}
+          </a>
+        </p>
       </div>
     </div>
   );

@@ -83,7 +83,7 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
   a.btn-style--gold, a.btn-style--green, a.btn-style--darkBlue {}
   [class*="btn-style--"] {
       font-family: 'Baloo2', cursive; font-size: 18px; font-weight: 500; line-height: 1.5;
-      text-decoration: none; color: rgba(0,31,30,1) !important; vertical-align: middle; text-align: center;
+      text-decoration: none; color: rgba(185,255,243,1) !important; vertical-align: middle; text-align: center;
       position: relative; z-index: 1; display: inline-block; overflow: hidden; padding: 12px 27px; min-width: 172px;
       background-color: transparent; border: none; -webkit-border-radius: 0; border-radius: 0;
   }
@@ -103,6 +103,7 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
       -ms-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   [class*="btn-style--"]::after {left: 50%;}
+  [class*="btn-style--"]:hover {color: rgba(217,172,72,1) !important;}
   [class*="btn-style--"]:hover::before {left: 50%; background-color: rgba(185,255,243,1);}
   [class*="btn-style--"]:hover::after {left: 0; background-color: rgba(185,255,243,1);}
   a.btn-style--green {color: rgba(217,172,72,1) !important;}
@@ -135,11 +136,13 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
     opacity: 1;
   }
 
-  /****** Experience ******/
-  #myExp .job-wrap {
+  /****** Experience & Education ******/
+  #myExp .job-wrap,
+  #myEdu .course-wrap {
     position: relative;
   }
-  #myExp .job-wrap:not(:last-child)::after {
+  #myExp .job-wrap:not(:last-child)::after, 
+  #myEdu .course-wrap:not(:last-child)::after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -147,6 +150,51 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
       width: 50%;
       height: 1px;
       background-color: rgba(185,255,243,0.36)
+  }
+  #myExp .job-wrap:last-child,
+  #myEdu .course-wrap:last-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /****** Portfolio ******/
+  #myPort > div {
+      width: 100%
+  }
+  #myPort .project-item-inner {
+    position: relative;
+  }
+  #myPort .project-item-link {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+  }
+  #myPort .project-item-inner:hover .project-item-link {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+  }
+  #myPort .project-item-inner .project-item-lightbox img {
+    opacity: 1;
+    background: transparent;
+    transition: all 0.3s ease-out;
+  }
+  #myPort .project-item-inner:hover .project-item-lightbox img {
+    opacity: 0.72;
+    background: rgba(0,31,30,0.72);
   }
   
   /****************************

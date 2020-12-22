@@ -9,20 +9,25 @@ export default {
       { text: "Experience", to: "myExp" },
       { text: "Skills", to: "mySkills" },
       { text: "Education", to: "myEdu" },
-      { text: "Portfolios", to: "myPort" },
+      { text: "Portfolio", to: "myPort" },
     ],
   },
   header: {
     img: process.env.PUBLIC_URL + "/assets/avatar.png",
     text: ["Hi!", "I'm "],
     typical: ["Nguyen Duc Thai.", 2000, "a front-end developer.", 2000],
-    btnText: "Discover More",
+    btnScroll: "Discover More",
+    btnToCvPDF: {
+      text: "CV PDF",
+      href:
+        "https://drive.google.com/file/d/1tud2QSc7cLAy9-x7bf90o1yxrkyVo00Q/view?usp=sharing",
+    },
   },
   about: {
     title: "About Me",
     img: process.env.PUBLIC_URL + "/assets/avatar.png",
     desc:
-      "I am a Front-end Developer. I want to create good websites for users.",
+      "I am a Front-end Developer. I love making good and fancy websites for users. So I'm looking forward to working more with today's trending UI frameworks, especially with ReactJS. I hope to have the opportunity to work and learn from you in the future.",
     infos: [
       {
         th: "Adress",
@@ -107,9 +112,9 @@ export default {
         position: "Intern Front-end Developer",
         desc: "Skills used in the exercises:",
         details: [
-          "Create templates CV with: html, scss, css, javascript/jquery.",
-          "Create staff management page and center management page with: webpack, js/ES6, typescript, ajax.",
-          "Create some small projects on course with: reactJS, nodeJS, mongoDB.",
+          "Created templates CV with: html, scss, css, javascript/jquery.",
+          "Created staff management page and center management page with: webpack, js/ES6, typescript, ajax.",
+          "Created some small projects on course with: reactJS, nodeJS, mongoDB.",
         ],
       },
       {
@@ -120,26 +125,75 @@ export default {
       },
     ],
   },
-  stack: {
-    title: "Stack",
-    tech: [
+  skill: {
+    title: "Skills",
+    skills: [
+      "Good communication and teamwork, basic English.",
+      "HTML5, CSS3, BOOTSTRAP, SCSS, Responsive, Wordpress.",
+      "Javascript/Jquery/ES6, basic Typescript, basic PHP.",
+      "ReactJS & some packages: axios, redux, react-hooks...",
+      "EDI: PHP Storm, Visual Studio Code.",
+      "Tool: Adobe PSD/XD, UI/UX, Git, Trello.",
+    ],
+  },
+  edu: {
+    title: "Education",
+    courses: [
       {
-        img: process.env.PUBLIC_URL + "/assets/mongo.png",
-        alt: "mongodb",
+        school: "CyberSoft Academy",
+        time: "08/2018 - 05/2019",
+        position: "Web Developer",
+        desc:
+          'I have found IT very interesting and have a strong future. So I decided to find a new direction. "CyberSoft Academy" taught me basic programming knowledge, front-end web programming skills and fullstack course on NodeJS and MongoDB.',
       },
       {
-        img: process.env.PUBLIC_URL + "/assets/react.svg",
-        alt: "react",
-      },
-      {
-        img: process.env.PUBLIC_URL + "/assets/express.png",
-        alt: "express",
-      },
-      {
-        img: process.env.PUBLIC_URL + "/assets/node.png",
-        alt: "node",
+        school: "University Of Transport And Communications Ha Noi",
+        time: "09/2011 - 01/2016",
+        position: "Civil Engineer",
+        desc: 'I studied "Civil Engineer" for 4.5 years at UTC Ha Noi.',
       },
     ],
-    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only`,
+  },
+  portfolio: {
+    title: "Portfolio",
+    projects: [
+      {
+        img: process.env.PUBLIC_URL + "/assets/portfolios/alphapack.png",
+        href: "http://viivue.mochisandbox.com/alphapack/",
+        alt: "Alpha Pack",
+      },
+      {
+        img:
+          process.env.PUBLIC_URL + "/assets/portfolios/etonhousethaodien.png",
+        href: "https://www.etonhousethaodien.com/",
+        alt: "Eton House",
+      },
+      {
+        img: process.env.PUBLIC_URL + "/assets/portfolios/florakitchen.png",
+        href: "https://www.florakitchen.vn/",
+        alt: "Flora Kitchen",
+      },
+      {
+        img: process.env.PUBLIC_URL + "/assets/portfolios/theanimaldoctors.jpg",
+        href: "https://www.theanimaldoctors.org/",
+        alt: "Animal Doctors",
+      },
+      {
+        img: process.env.PUBLIC_URL + "/assets/portfolios/thenestsaigon.jpg",
+        href: "http://viivue.mochisandbox.com/thenestsaigon/",
+        alt: "The Nest Sai Gon",
+      },
+      {
+        img:
+          process.env.PUBLIC_URL + "/assets/portfolios/thai-clone-trello.png",
+        href: "http://thai-clone-trello.surge.sh/",
+        alt: "React - Clone Trello",
+      },
+      {
+        img: process.env.PUBLIC_URL + "/assets/portfolios/nguyenducthai-cv.png",
+        href: "http://nguyenducthai-cv.surge.sh/",
+        alt: "React - My CV",
+      },
+    ],
   },
 };

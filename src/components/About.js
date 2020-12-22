@@ -5,16 +5,16 @@ import content from "../content";
 import useWindowPosition from "../hook/useWindowPosition";
 
 export default function About() {
-  const animated = useWindowPosition("myHeader", 0.4);
+  const animated = useWindowPosition("myHeader", 0.5, 1);
 
   return (
     <div
       id="myAbout"
-      className="w-full lg:w-11/12 xl:w-10/12 mx-auto mb-16 px-6 flex flex-col items-center justify-center min-h-screen"
+      className="w-full lg:w-11/12 xl:w-10/12 mx-auto pt-16 px-6 flex flex-col items-center justify-center min-h-screen"
     >
       <h1
-        className={`uppercase transform transition duration-2000 text-5xl mb-10 md:mb-12 ${
-          animated ? "" : "translate-y-10 opacity-0"
+        className={`uppercase transform transition duration-2000 text-5xl mb-8 md:mb-10 ${
+          animated ? "" : "opacity-0"
         }`}
       >
         {content.about.title}
@@ -43,7 +43,7 @@ export default function About() {
         <div className="w-4/5 md:w-3/5">
           <p
             className={`mb-6 transform transition duration-2000 ${
-              animated ? "" : "translate-y-10 opacity-0"
+              animated ? "" : "opacity-0"
             }`}
           >
             {content.about.desc}
@@ -51,7 +51,7 @@ export default function About() {
 
           <div
             className={`mb-6 transform transition duration-2000 ${
-              animated ? "" : "translate-y-10 opacity-0"
+              animated ? "" : "opacity-0"
             }`}
           >
             {content.about.infos.map((info, index) => {
@@ -79,7 +79,7 @@ export default function About() {
 
           <div
             className={`flex transform transition duration-2000 ${
-              animated ? "" : "translate-y-10 opacity-0"
+              animated ? "" : "opacity-0"
             }`}
           >
             {content.about.socials.map((social, index) => {
