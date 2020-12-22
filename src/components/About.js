@@ -5,7 +5,7 @@ import content from "../content";
 import useWindowPosition from "../hook/useWindowPosition";
 
 export default function About() {
-  const animated = useWindowPosition("myHeader", 0.4, 1);
+  const animated = useWindowPosition("myHeader", 0.4);
 
   return (
     <div
@@ -13,7 +13,7 @@ export default function About() {
       className="w-full lg:w-11/12 xl:w-10/12 mx-auto mb-16 px-6 flex flex-col items-center justify-center min-h-screen"
     >
       <h1
-        className={`transform transition duration-2000 text-5xl mb-12 ${
+        className={`uppercase transform transition duration-2000 text-5xl mb-10 md:mb-12 ${
           animated ? "" : "translate-y-10 opacity-0"
         }`}
       >
@@ -26,19 +26,19 @@ export default function About() {
         className="w-full flex flex-col md:flex-row"
       >
         <div className="w-1/5 md:w-2/5 pt-1">
-        <LazyLoadImage
-          src={content.about.img}
-          alt="avatar"
-          style={{
-            width: "auto",
-            height: "auto",
-            maxHeight: "270px",
-            maxWidth: "270px",
-            filter: "opacity(0.7)",
-            borderRadius: "12px",
-          }}
-          effect="blur"
-        />
+          <LazyLoadImage
+            src={content.about.img}
+            alt="avatar"
+            style={{
+              width: "auto",
+              height: "auto",
+              maxHeight: "270px",
+              maxWidth: "270px",
+              filter: "opacity(0.7)",
+              borderRadius: "12px",
+            }}
+            effect="blur"
+          />
         </div>
         <div className="w-4/5 md:w-3/5">
           <p
@@ -56,14 +56,22 @@ export default function About() {
           >
             {content.about.infos.map((info, index) => {
               return (
-                <p
-                  key={index}
-                  className="mb-4 flex"
-                >
-                  <span className="txt-Montserrat--semibold pr-4" style={{
-                    minWidth: "150px"
-                  }}>{info.th}:</span>
-                  <span>{info.action ? <a href={info.action}>{info.td}</a> : info.td}</span>
+                <p key={index} className="mb-4 flex">
+                  <span
+                    className="txt-Montserrat--semibold pr-4"
+                    style={{
+                      minWidth: "150px",
+                    }}
+                  >
+                    {info.th}:
+                  </span>
+                  <span>
+                    {info.action ? (
+                      <a href={info.action}>{info.td}</a>
+                    ) : (
+                      info.td
+                    )}
+                  </span>
                 </p>
               );
             })}

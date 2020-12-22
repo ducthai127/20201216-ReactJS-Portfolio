@@ -6,7 +6,7 @@ import BackGround from "./components/BackGround";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Stack from "./components/Stack";
-import Work from "./components/Work";
+import Experience from "./components/Experience";
 
 function App() {
   SmoothScroll({
@@ -19,7 +19,7 @@ function App() {
       <Navigation />
       <Header />
       <About />
-      <Work />
+      <Experience />
       <SimpleReactLightbox>
         <Stack />
       </SimpleReactLightbox>

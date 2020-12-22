@@ -48,12 +48,6 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
   h1,h2,h3,h4,h5,h6 {
       color: rgba(185,255,243,1); margin-bottom: 25px; font-family: 'Baloo2', cursive; line-height: 1.25; font-weight: 600; letter-spacing: 0.77px;
   }
-  /* #root h1 {font-size: 50px;}
-  #root h2 {font-size: 44px;}
-  #root h3 {font-size: 38px;}
-  #root h4 {font-size: 32px;}
-  #root h5 {font-size: 26px;}
-  #root h6 {font-size: 20px;} */
   hr {height: 0; border-bottom: 1px solid rgba(185,255,243,0.36); background: none; margin-bottom: 25px;}
   
   /* Text colors & fonts */
@@ -135,10 +129,24 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
   ****************************/
   /****** Navigation ******/
   #myNav .menu-items:hover a {
-    opacity: 0.5
+    opacity: 0.5;
   }
   #myNav .menu-items:hover a:hover {
-    opacity: 1
+    opacity: 1;
+  }
+
+  /****** Experience ******/
+  #myExp .job-wrap {
+    position: relative;
+  }
+  #myExp .job-wrap:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      width: 50%;
+      height: 1px;
+      background-color: rgba(185,255,243,0.36)
   }
   
   /****************************
