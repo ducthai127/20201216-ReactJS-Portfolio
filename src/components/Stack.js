@@ -16,14 +16,19 @@ export default function Stack() {
         <div className="flex flex-wrap justify-center">
           {content.stack.tech.map((tech, index) => {
             return (
-              <span
+              <p
                 key={index}
                 className={`w-40 h-40 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 ${
                   index % 2 !== 0 ? "animate-bounce" : "animate-bounceFirst"
                 }`}
               >
-                <LazyLoadImage effect="blur" src={tech.img} alt={tech.alt} />
-              </span>
+                <LazyLoadImage
+                  className="w-auto h-auto max-w-full max-h-full"
+                  effect="blur"
+                  src={tech.img}
+                  alt={tech.alt}
+                />
+              </p>
             );
           })}
         </div>
@@ -39,7 +44,11 @@ export default function Stack() {
                       index % 2 !== 0 ? "animate-bounce" : "animate-bounceFirst"
                     }`}
                   >
-                    <img src={tech.img} alt={tech.alt}></img>
+                    <img
+                      className="w-auto h-auto max-w-full max-h-full"
+                      src={tech.img}
+                      alt={tech.alt}
+                    ></img>
                   </a>
                 </Tilt>
               );

@@ -1,8 +1,8 @@
 import React from "react";
 import SimpleReactLightbox from "simple-react-lightbox";
 import SmoothScroll from "smoothscroll-for-websites";
+import About from "./components/About";
 import BackGround from "./components/BackGround";
-import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Stack from "./components/Stack";
@@ -18,11 +18,11 @@ function App() {
       <BackGround />
       <Navigation />
       <Header />
+      <About />
       <Work />
       <SimpleReactLightbox>
         <Stack />
       </SimpleReactLightbox>
-      <Contact />
     </>
   );
 }

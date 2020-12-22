@@ -1,5 +1,4 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link as ScrollLink } from "react-scroll";
 import Typical from "react-typical";
@@ -7,55 +6,46 @@ import content from "../content";
 import useStartAnimation from "../hook/useStartAnimation";
 
 export default function Header() {
-  const transition = (duration) =>
-    `transition duration-${duration} ease-in-out`;
-  const styleTranslate = "translate-y-10 opacity-0";
+  const transition = (duration = 300, delay = 0) =>
+    `transition duration-${duration} delay-${delay} ease-out`;
+  const styleFade = "opacity-0";
   const animated = useStartAnimation();
 
   return (
-    <div id="header" className="min-h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center justify-center md:flex-row-reverse md:w-10/12 md:justify-between">
-        <div className="w-full md:w-2/5">
-          <LazyLoadImage
-            src={content.header.img}
-            alt="profile"
-            className="w-full mx-auto"
-            effect="blur"
-            placeholderSrc={content.header.imgPlaceholder}
+    <div
+      id="myHeader"
+      className="w-full lg:w-11/12 xl:w-10/12 mx-auto mb-16 px-6 flex flex-col items-center justify-center min-h-screen"
+    >
+      <div className="w-full text-center md:text-left">
+        <h2
+          className={`text-2xl md:text-4xl lg:text-5xl ${
+            animated ? "opacity-1" : styleFade
+          } ${transition(1000, 0)}`}
+        >
+          {content.header.text[0]}
+        </h2>
+        <h1
+          className={`text-2xl md:text-4xl lg:text-6xl ${
+            animated ? "opacity-1" : styleFade
+          } ${transition(1000, 150)}`}
+        >
+          {content.header.text[1]}
+          <Typical
+            steps={content.header.typical}
+            loop={Infinity}
+            className="inline-block"
+            wrapper="p"
           />
-        </div>
-
-        <div className="w-full md:w-3/5 text-center md:text-left">
-          <h2
-            className={`text-3xl md:text-4xl lg:text-6xl text-white font-bold transform ${
-              animated ? "translate-y-0" : styleTranslate
-            } ${transition(2000)}`}
-          >
-            {content.header.text[0]}
-            <br />
-            {content.header.text[1]}
-          </h2>
-          <h1
-            className={`text-2xl md:text-4xl text-gray-400 transform ${
-              animated ? "translate-y-0" : styleTranslate
-            } ${transition(3000)}`}
-          >
-            {content.header.text[2]}
-            <Typical
-              steps={content.header.typical}
-              loop={Infinity}
-              className="inline-block"
-              wrapper="p"
-            />
-          </h1>
-          <ScrollLink
-            to="myWork"
-            smooth={true}
-            className="btn-style--gold mt-5"
-          >
-            {content.header.btnText}
-          </ScrollLink>
-        </div>
+        </h1>
+        <ScrollLink
+          to="myWork"
+          smooth={true}
+          className={`btn-style--gold mt-5 ${
+            animated ? "opacity-1" : styleFade
+          } ${transition(1000, 300)}`}
+        >
+          {content.header.btnText}
+        </ScrollLink>
       </div>
     </div>
   );
