@@ -23,17 +23,18 @@ export default function Navigation() {
             className="w-auto h-auto max-w-full max-h-full"
           />
         </ScrollLink>
-        <div className="menu-items txt-Baloo2--medium txt-color--green text-lg">
+        <div className="menu-items txt-Baloo2--medium txt-color--green text-xl">
           {content.nav.links.map((link, index) => {
             return (
               <ScrollLink
+                key={index}
                 to={link.to}
                 smooth={true}
                 className={`ml-6 md:ml-8 lg:ml-10 ${
                   animated ? "opacity-1" : styleFade
                 } ${transition(1000, 100 * index)}`}
               >
-                <span key={index}>{link.text}</span>
+                <span>{link.text}</span>
               </ScrollLink>
             );
           })}

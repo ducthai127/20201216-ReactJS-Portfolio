@@ -24,6 +24,31 @@ export default {
     img: process.env.PUBLIC_URL + "/assets/avatar.png",
     desc:
       "I am a Front-end Developer. I want to create good websites for users.",
+    infos: [
+      {
+        th: "Adress",
+        td: "Xuan Dinh street, Bac Tu Liem district, Ha Noi"
+      },
+      {
+        th: "Date of birth",
+        td: "1993"
+      },
+      {
+        th: "Website",
+        td: "www.nguyenducthai.com",
+        action: "https://www.nguyenducthai.com/"
+      },
+      {
+        th: "Email",
+        td: "ducthaind127@gmail.com",
+        action: "mailto:ducthaind127@gmail.com"
+      },
+      {
+        th: "Phone",
+        td: "0977 377 127",
+        action: "tel: 0977 377 127"
+      },
+    ],
     socials: [
       {
         href: "https://www.facebook.com/thaibeo127/",
@@ -32,17 +57,9 @@ export default {
       },
       {
         href: "https://www.linkedin.com/in/thai-nguyen-0a8805198/",
-        alt: "link",
-        img: process.env.PUBLIC_URL + "/assets/link.png",
+        alt: "linkedin",
+        img: process.env.PUBLIC_URL + "/assets/linkedin.png",
       },
-      // {
-      //   href: "tel: 0977 377 127",
-      //   alt: "0977 377 127",
-      // },
-      // {
-      //   href: "javascript:sendEmail(['ducthaind127','gmail.com'].join('@'))",
-      //   alt: "ducthaind127@gmail.com",
-      // },
     ],
   },
   work: {

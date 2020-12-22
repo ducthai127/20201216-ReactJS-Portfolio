@@ -36,13 +36,12 @@ export default function Stack() {
           <div className="flex flex-wrap justify-center">
             {content.stack.tech.map((tech, index) => {
               return (
-                <Tilt>
+                <Tilt key={index}>
                   <a
-                    href={tech.img}
-                    key={index}
                     className={`w-40 h-40 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 ${
                       index % 2 !== 0 ? "animate-bounce" : "animate-bounceFirst"
                     }`}
+                    href={tech.img}
                   >
                     <img
                       className="w-auto h-auto max-w-full max-h-full"

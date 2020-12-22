@@ -10,10 +10,10 @@ export default function About() {
   return (
     <div
       id="myAbout"
-      className="w-full lg:w-11/12 xl:w-10/12 mx-auto px-6 flex flex-col items-center justify-center min-h-screen"
+      className="w-full lg:w-11/12 xl:w-10/12 mx-auto mb-16 px-6 flex flex-col items-center justify-center min-h-screen"
     >
       <h1
-        className={`transform transition duration-2000 text-5xl ${
+        className={`transform transition duration-2000 text-5xl mb-12 ${
           animated ? "" : "translate-y-10 opacity-0"
         }`}
       >
@@ -23,8 +23,9 @@ export default function About() {
         style={{
           minHeight: "50vh",
         }}
-        className="w-full flex flex-col md:flex-row justify-between items-center"
+        className="w-full flex flex-col md:flex-row"
       >
+        <div className="w-1/5 md:w-2/5 pt-1">
         <LazyLoadImage
           src={content.about.img}
           alt="avatar"
@@ -37,28 +38,53 @@ export default function About() {
             borderRadius: "12px",
           }}
           effect="blur"
-          className="transition duration-2000 ease-out mx-auto"
         />
-        <div className="w-4/5 md:w-2/5 mt-5 transition duration-2000">
+        </div>
+        <div className="w-4/5 md:w-3/5">
           <p
-            className={`transform transition duration-3000 text-white text-2xl ${
+            className={`mb-6 transform transition duration-2000 ${
               animated ? "" : "translate-y-10 opacity-0"
             }`}
           >
             {content.about.desc}
           </p>
+
           <div
-            className={`flex transform transition duration-3000 ${
+            className={`mb-6 transform transition duration-2000 ${
+              animated ? "" : "translate-y-10 opacity-0"
+            }`}
+          >
+            {content.about.infos.map((info, index) => {
+              return (
+                <p
+                  key={index}
+                  className="mb-4 flex"
+                >
+                  <span className="txt-Montserrat--semibold pr-4" style={{
+                    minWidth: "150px"
+                  }}>{info.th}:</span>
+                  <span>{info.action ? <a href={info.action}>{info.td}</a> : info.td}</span>
+                </p>
+              );
+            })}
+          </div>
+
+          <div
+            className={`flex transform transition duration-2000 ${
               animated ? "" : "translate-y-10 opacity-0"
             }`}
           >
             {content.about.socials.map((social, index) => {
               return (
-                <a href={social.href} target="_blank" rel="nofollow">
+                <a
+                  href={social.href}
+                  rel="noreferrer"
+                  target="_blank"
+                  key={index}
+                  className="w-12 h-12 mr-4 transform hover:scale-110"
+                >
                   <LazyLoadImage
                     effect="blur"
-                    className="m-2"
-                    width="50px"
                     src={social.img}
                     alt={social.alt}
                   />

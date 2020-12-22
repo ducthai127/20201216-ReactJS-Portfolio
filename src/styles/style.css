@@ -41,8 +41,8 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
   }
   
   a, button {cursor: pointer; color: rgba(217,172,72,1); -webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;transition: all 0.3s ease-out;}
-  p a {text-decoration: none; color: rgba(217,172,72,1); font-weight: 600; letter-spacing: 1.27px;}
-  p a:hover {text-decoration: none; color: rgba(185,255,243,0.72); outline: 0;}
+  p a {text-decoration: none; color: rgba(217,172,72,1);}
+  p a:hover {text-decoration: none; color: rgba(185,255,243,1); outline: 0;}
   
   /* Headings */
   h1,h2,h3,h4,h5,h6 {
