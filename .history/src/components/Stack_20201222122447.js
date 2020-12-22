@@ -1,8 +1,9 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { SRLWrapper } from "simple-react-lightbox";
 import content from "../content";
+import "@fancyapps/fancybox/dist/jquery.fancybox.min.js";
+import "@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 export default function Stack() {
   return (
@@ -28,23 +29,22 @@ export default function Stack() {
             );
           })}
         </div>
-        <SRLWrapper>
-          <div className="flex flex-wrap justify-center">
-            {content.stack.tech.map((tech, index) => {
-              return (
-                <a
-                  href={tech.img}
-                  key={index}
-                  className={`w-40 h-40 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 ${
-                    index % 2 !== 0 ? "animate-bounce" : "animate-bounceFirst"
-                  }`}
-                >
-                  <img src={tech.img} alt={tech.alt}></img>
-                </a>
-              );
-            })}
-          </div>
-        </SRLWrapper>
+        <div className="flex flex-wrap justify-center">
+          {content.stack.tech.map((tech, index) => {
+            return (
+              <a
+                data-fancybox="gallery"
+                href={tech.img}
+                key={index}
+                className={`w-40 h-40 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 ${
+                  index % 2 !== 0 ? "animate-bounce" : "animate-bounceFirst"
+                }`}
+              >
+                <img src={tech.img} alt={tech.alt}></img>
+              </a>
+            );
+          })}
+        </div>
       </div>
       <p className="mt-10 mb-10 w-11/12 md:max-w-xl text-center inline-block text-xl md:text-2xl font-dosis">
         {content.stack.desc}

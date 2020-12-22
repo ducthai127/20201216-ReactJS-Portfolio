@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link as ScrollLink } from "react-scroll";
 import content from "../content";
 
@@ -14,7 +15,10 @@ export default function Navigation() {
         <ScrollLink
           to="header"
           smooth={true}
-          className="flex-1 w-auto cursor-pointer h-16"
+          className="flex-1 w-auto cursor-pointer"
+          style={{
+            height: "70px",
+          }}
         >
           <img
             src={content.nav.logo.img}

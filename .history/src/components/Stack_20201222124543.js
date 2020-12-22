@@ -36,7 +36,7 @@ export default function Stack() {
                   href={tech.img}
                   key={index}
                   className={`w-40 h-40 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 ${
-                    index % 2 !== 0 ? "animate-bounce" : "animate-bounceFirst"
+                    index % 2 === 0 ? "animate-bounce" : "animate-bounceFirst"
                   }`}
                 >
                   <img src={tech.img} alt={tech.alt}></img>
