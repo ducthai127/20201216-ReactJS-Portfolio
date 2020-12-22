@@ -23,7 +23,7 @@ export default function Navigation() {
             className="w-auto h-auto max-w-full max-h-full"
           />
         </ScrollLink>
-        <div className="menu-items txt-Baloo2--medium txt-color--green text-xl">
+        <div className="menu-items txt-Baloo2--medium txt-color--green text-xl hidden sm:block">
           {content.nav.links.map((link, index) => {
             return (
               <ScrollLink

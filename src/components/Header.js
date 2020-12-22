@@ -15,16 +15,16 @@ export default function Header() {
       id="myHeader"
       className="w-full lg:w-11/12 xl:w-10/12 mx-auto px-6 flex flex-col items-center justify-center min-h-screen"
     >
-      <div className="w-full text-center md:text-left">
+      <div className="w-full text-center lg:text-left">
         <h2
-          className={`text-2xl md:text-4xl lg:text-5xl ${
+          className={`text-3xl md:text-4xl ${
             animated ? "opacity-1" : styleFade
           } ${transition(1000, 0)}`}
         >
           {content.header.text[0]}
         </h2>
         <h1
-          className={`text-2xl md:text-4xl lg:text-6xl ${
+          className={`text-4xl md:text-5xl ${
             animated ? "opacity-1" : styleFade
           } ${transition(1000, 150)}`}
         >
@@ -37,14 +37,14 @@ export default function Header() {
           />
         </h1>
         <p
-          className={`inline-block mt-6 ${
+          className={`inline-flex flex-col-reverse sm:inline-block mt-6 ${
             animated ? "opacity-1" : styleFade
           } ${transition(1000, 300)}`}
         >
           <ScrollLink
             to="myAbout"
             smooth={true}
-            className="btn-style--green mr-12 animate-bounce"
+            className="btn-style--green mt-6 sm:mt-0 mr-0 sm:mr-4 md:mr-12 animate-bounce"
             style={{
               animationDuration: "3s",
               animationDelay: "1.2s",

@@ -12,10 +12,10 @@ export default function Portfolio() {
   return (
     <div
       id="myPort"
-      className="w-full lg:w-11/12 xl:w-10/12 mx-auto pt-16 pb-32 px-6 flex flex-col items-center justify-center min-h-screen"
+      className="w-full lg:w-11/12 xl:w-10/12 mx-auto px-6 pt-24 pb-32 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
     >
       <h1
-        className={`uppercase transform transition duration-2000 text-5xl mb-8 md:mb-10 ${
+        className={`uppercase transform transition duration-2000 text-center lg:text-left text-4xl md:text-5xl mb-8 md:mb-10 ${
           animated ? "" : "opacity-0"
         }`}
       >
@@ -27,10 +27,7 @@ export default function Portfolio() {
             return (
               <div
                 key={index}
-                className="project-item w-full py-6 px-0 md:w-3/6 md:p-4 lg:w-2/6"
-                style={{
-                  height: "250px",
-                }}
+                className="project-item py-4 px-0 w-full md:w-3/6 md:p-4 lg:w-2/6"
               >
                 <Tilt className="project-item-inner w-full h-full">
                   <a
