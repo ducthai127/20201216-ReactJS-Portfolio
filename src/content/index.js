@@ -20,7 +20,7 @@ export default {
     btnToCvPDF: {
       text: "CV PDF",
       href:
-        "https://drive.google.com/file/d/1tud2QSc7cLAy9-x7bf90o1yxrkyVo00Q/view?usp=sharing",
+        "https://drive.google.com/file/d/1d4u0864zuXdsIZopjwuFRdKWnKBnE1OJ/view?usp=sharing",
     },
   },
   about: {
@@ -78,7 +78,7 @@ export default {
           "HTML/CSS skill: the design file into website.",
           "JS libraries: sliders, scrolls, animations (slick, aos, gsap)...",
           "Wordpress - PHP: create elements in Visual Composer...",
-          "Tool: Adobe PSD, XD",
+          "Tool: Adobe PSD, XD.",
           "EDI: PHP Storm, Visual Studio Code.",
           "Version control systems: Git.",
           "Manage Task: Trello.",
@@ -113,8 +113,18 @@ export default {
         desc: "Skills used in the exercises:",
         details: [
           "Created templates CV with: html, scss, css, javascript/jquery.",
-          "Created staff management page and center management page with: webpack, js/ES6, typescript, ajax.",
+          "Created staff management page with: webpack, js/ES6, typescript, ajax.",
           "Created some small projects on course with: reactJS, nodeJS, mongoDB.",
+        ],
+        projects: [
+          {
+            href: "http://thai-clone-trello.surge.sh/",
+            alt: "React - Clone Trello",
+          },
+          {
+            href: "http://nguyenducthai-cv.surge.sh/",
+            alt: "React - My CV",
+          },
         ],
       },
       {
