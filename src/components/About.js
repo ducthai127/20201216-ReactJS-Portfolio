@@ -1,6 +1,4 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import content from "../content";
 import useWindowPosition from "../hook/useWindowPosition";
 
@@ -26,9 +24,12 @@ export default function About() {
         className="w-full flex flex-col lg:flex-row"
       >
         <div className="w-full lg:w-2/5 pt-0 pb-8 lg:pt-1 lg:pb-0 text-center lg:text-left">
-          <LazyLoadImage
+          <img
             src={content.about.img}
-            alt="avatar"
+            alt={content.about.alt}
+            className={`inline-block transform transition duration-2000 ${
+              animated ? "" : "opacity-0"
+            }`}
             style={{
               width: "auto",
               height: "auto",
@@ -37,7 +38,6 @@ export default function About() {
               filter: "opacity(0.7)",
               borderRadius: "12px",
             }}
-            effect="blur"
           />
         </div>
         <div className="w-full lg:w-3/5">
@@ -86,11 +86,7 @@ export default function About() {
                   key={index}
                   className="w-12 h-12 mr-4 transform hover:scale-110"
                 >
-                  <LazyLoadImage
-                    effect="blur"
-                    src={social.img}
-                    alt={social.alt}
-                  />
+                  <img src={social.img} alt={social.alt} />
                 </a>
               );
             })}

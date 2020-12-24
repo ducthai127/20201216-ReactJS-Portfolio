@@ -194,14 +194,27 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
     opacity: 1;
     visibility: visible;
   }
-  #myPort .project-item-inner .project-item-lightbox img {
-    opacity: 1;
-    background: transparent;
-    transition: all 0.3s ease-out;
+  #myPort .project-item-inner .project-item-lightbox {
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transition: opacity 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
   }
-  #myPort .project-item-inner:hover .project-item-lightbox img {
-    opacity: 0.72;
-    background: rgba(0,31,30,0.72);
+  #myPort .project-item-inner .project-item-lightbox img {
+    opacity: 0;
+  }
+  #myPort .project-item-inner:hover .project-item-lightbox {
+    opacity: 0.5;
+    -webkit-animation: scrollBg 3s linear forwards;
+    animation: scrollBg 3s linear forwards;
+  }
+  @keyframes scrollBg {
+    0% {background-position: center 0;}
+    100% {background-position: center 100%;}
   }
 
   /****************************
@@ -211,16 +224,14 @@ body.safari input, body.safari textarea, body.safari button, body.safari select,
     body {font-size: 16px;}
     [class*="btn-style--"] {font-size: 16px; padding: 10px 22px; min-width: 150px;}
     ul.custom-ul > li {padding: 0 0 0 2.2em;}
+    #myPort .project-item-inner:hover .project-item-lightbox {-webkit-animation: none; animation: none;}
   }
   @media only screen and (max-width: 768px){
     body {font-size: 14px;}
     [class*="btn-style--"] {font-size: 14px; padding: 8px 18px; min-width: 130px;}
-   
   }
   @media only screen and (max-width: 480px){
-    .min-width-150 {
-        min-width: 120px;
-    }
+    .min-width-150 {min-width: 120px;}
   }
   
   /****************************

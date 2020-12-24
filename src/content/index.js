@@ -1,8 +1,9 @@
 export default {
   nav: {
     logo: {
-      title: "Logo TN",
-      img: process.env.PUBLIC_URL + "/assets/logo/logoTN-aqua.png",
+      img:
+        "https://www.nguyenducthai.com/wp-content/uploads/2020/12/logoTN-aqua.png",
+      alt: "Logo",
     },
     links: [
       { text: "About", to: "myAbout" },
@@ -13,7 +14,8 @@ export default {
     ],
   },
   header: {
-    img: process.env.PUBLIC_URL + "/assets/avatar.png",
+    img: "https://www.nguyenducthai.com/wp-content/uploads/2020/12/avatar.png",
+    alt: "Avatar",
     text: ["Hi!", "I'm "],
     typical: ["Nguyen Duc Thai.", 2000, "a front-end developer.", 2000],
     btnScroll: "Discover More",
@@ -25,7 +27,8 @@ export default {
   },
   about: {
     title: "About Me",
-    img: process.env.PUBLIC_URL + "/assets/avatar.png",
+    img: "https://www.nguyenducthai.com/wp-content/uploads/2020/12/avatar.png",
+    alt: "Avatar",
     desc:
       "I am a Front-end Developer. I love making good and fancy websites for users. So I'm looking forward to working more with today's trending UI frameworks, especially with ReactJS. I hope to have the opportunity to work and learn from you in the future.",
     infos: [
@@ -57,12 +60,14 @@ export default {
       {
         href: "https://www.facebook.com/thaibeo127/",
         alt: "facebook",
-        img: process.env.PUBLIC_URL + "/assets/facebook.png",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/facebook.png",
       },
       {
         href: "https://www.linkedin.com/in/thai-nguyen-0a8805198/",
         alt: "linkedin",
-        img: process.env.PUBLIC_URL + "/assets/linkedin.png",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/linkedin.png",
       },
     ],
   },
@@ -168,39 +173,44 @@ export default {
     title: "Portfolio",
     projects: [
       {
-        img: process.env.PUBLIC_URL + "/assets/portfolios/alphapack.png",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/alphapack.jpg",
         href: "http://viivue.mochisandbox.com/alphapack/",
         alt: "Alpha Pack",
       },
       {
         img:
-          process.env.PUBLIC_URL + "/assets/portfolios/etonhousethaodien.png",
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/etonhousethaodien.jpg",
         href: "https://www.etonhousethaodien.com/",
         alt: "Eton House",
       },
       {
-        img: process.env.PUBLIC_URL + "/assets/portfolios/florakitchen.png",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/florakitchen.jpg",
         href: "https://www.florakitchen.vn/",
         alt: "Flora Kitchen",
       },
       {
-        img: process.env.PUBLIC_URL + "/assets/portfolios/theanimaldoctors.jpg",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/theanimaldoctors.jpg",
         href: "https://www.theanimaldoctors.org/",
         alt: "Animal Doctors",
       },
       {
-        img: process.env.PUBLIC_URL + "/assets/portfolios/thenestsaigon.jpg",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/thenestsaigon.jpg",
         href: "http://viivue.mochisandbox.com/thenestsaigon/",
         alt: "The Nest Sai Gon",
       },
       {
         img:
-          process.env.PUBLIC_URL + "/assets/portfolios/thai-clone-trello.png",
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/thai-clone-trello.jpg",
         href: "http://thai-clone-trello.surge.sh/",
         alt: "React - Clone Trello",
       },
       {
-        img: process.env.PUBLIC_URL + "/assets/portfolios/nguyenducthai-cv.png",
+        img:
+          "https://www.nguyenducthai.com/wp-content/uploads/2020/12/nguyenducthai-cv.png",
         href: "http://nguyenducthai-cv.surge.sh/",
         alt: "React - My CV",
       },

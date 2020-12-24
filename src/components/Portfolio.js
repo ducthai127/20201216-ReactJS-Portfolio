@@ -1,7 +1,4 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import Tilt from "react-parallax-tilt";
 import { SRLWrapper } from "simple-react-lightbox";
 import content from "../content";
 import useWindowPosition from "../hook/useWindowPosition";
@@ -27,26 +24,34 @@ export default function Portfolio() {
             return (
               <div
                 key={index}
-                className="project-item py-4 px-0 w-full md:w-3/6 md:p-4 lg:w-2/6"
+                className={`project-item py-4 px-0 w-full md:w-3/6 md:p-4 lg:w-2/6 transform transition duration-2000 ${
+                  animated ? "" : "opacity-0"
+                }`}
               >
-                <Tilt className="project-item-inner w-full h-full">
-                  <a
-                    className="project-item-lightbox inline-block w-full h-full overflow-hidden"
-                    href={project.href}
+                <div className="project-item-inner w-full h-full">
+                  <div
+                    className="project-item-lightbox w-full h-full overflow-hidden"
+                    style={{
+                      backgroundImage: `url(${project.img})`,
+                    }}
                   >
-                    <LazyLoadImage
-                      effect="blur"
-                      className="w-auto h-auto max-w-full max-h-full"
-                      src={project.img}
-                      alt={project.alt}
-                    />
-                  </a>
+                    <a
+                      className="inline-block w-full h-full"
+                      href={project.img}
+                    >
+                      <img
+                        className="w-full h-auto"
+                        src={project.img}
+                        alt={project.alt}
+                      />
+                    </a>
+                  </div>
                   <p className="project-item-link">
                     <a rel="noreferrer" target="_blank" href={project.href}>
                       {project.alt}
                     </a>
                   </p>
-                </Tilt>
+                </div>
               </div>
             );
           })}

@@ -19,7 +19,7 @@ export default function Navigation() {
         >
           <img
             src={content.nav.logo.img}
-            alt={content.nav.logo.title}
+            alt={content.nav.logo.alt}
             className="w-auto h-auto max-w-full max-h-full"
           />
         </ScrollLink>
