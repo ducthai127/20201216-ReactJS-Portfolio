@@ -2,7 +2,7 @@ export default {
   nav: {
     logo: {
       img:
-        "https://www.nguyenducthai.com/wp-content/uploads/2020/12/logoTN-aqua.png",
+        "https://cdn.shopify.com/s/files/1/0585/3328/1943/files/logoTN-aqua.png?v=1666174917",
       alt: "Logo",
     },
     links: [
@@ -128,7 +128,7 @@ export default {
           },
           {
             href: "http://nguyenducthai-cv.surge.sh/",
-            alt: "React - My CV",
+            alt: "React - My Portfolio",
           },
         ],
       },
@@ -212,7 +212,7 @@ export default {
         img:
           "https://www.nguyenducthai.com/wp-content/uploads/2020/12/nguyenducthai-cv.png",
         href: "http://nguyenducthai-cv.surge.sh/",
-        alt: "React - My CV",
+        alt: "React - My Portfolio",
       },
     ],
   },
