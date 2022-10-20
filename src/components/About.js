@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div
       id="myAbout"
-      className="w-full lg:w-11/12 xl:w-10/12 mx-auto px-6 pt-0 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
+      className="w-full lg:w-10/12 xl:w-8/12 mx-auto px-6 pt-0 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
     >
       <h1
         className={`uppercase transform transition duration-2000 text-center lg:text-left text-4xl md:text-5xl mb-8 md:mb-10 ${

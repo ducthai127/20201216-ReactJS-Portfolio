@@ -8,4 +8,4 @@ cd build
 cp index.html 200.html
 
 # Start deploying via Surge
-surge . demo-react-hooks.surge.sh
+surge . thai-cv.surge.sh
