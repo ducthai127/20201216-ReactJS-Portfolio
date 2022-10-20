@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <div
       id="myHeader"
-      className="w-full lg:w-10/12 xl:w-8/12 mx-auto px-6 flex flex-col items-center justify-center min-h-screen"
+      className="w-container mx-auto px-6 flex flex-col items-center justify-center min-h-screen"
     >
       <div className="w-full text-center lg:text-left">
         <h2

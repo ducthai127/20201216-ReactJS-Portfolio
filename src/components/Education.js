@@ -8,7 +8,7 @@ export default function Education() {
   return (
     <div
       id="myEdu"
-      className="w-full lg:w-10/12 xl:w-8/12 mx-auto px-6 pt-24 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
+      className="w-container mx-auto px-6 pt-24 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
     >
       <h1
         className={`uppercase transform transition duration-2000 text-center lg:text-left text-4xl md:text-5xl mb-8 md:mb-10 ${
@@ -35,7 +35,7 @@ export default function Education() {
                 {course.time}
               </h4>
             </div>
-            <p className="course-school txt-Montserrat--semibold--italic text-lg mb-4">
+            <p className="course-school txt-Montserrat--semibold--italic text-lg md:text-xl mb-4">
               {course.school}
             </p>
             <p className="course-desc mb-4">{course.desc}</p>

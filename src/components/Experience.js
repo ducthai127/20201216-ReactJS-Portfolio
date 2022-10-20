@@ -8,7 +8,7 @@ export default function Experience() {
   return (
     <div
       id="myExp"
-      className="w-full lg:w-10/12 xl:w-8/12 mx-auto px-6 pt-24 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
+      className="w-container mx-auto px-6 pt-24 sm:pt-16 min-h-0 sm:min-h-screen flex flex-col items-center justify-center"
     >
       <h1
         className={`uppercase transform transition duration-2000 text-center lg:text-left text-4xl md:text-5xl mb-8 md:mb-10 ${
@@ -87,7 +87,7 @@ export default function Experience() {
 
             {job.notable_project ? (
               <div className="job-notable_project">
-                <p className="inline-block mt-4 mb-4 txt-Montserrat--semibold--italic">
+                <p className="inline-block mt-6 txt-Montserrat--semibold--italic">
                   <span>Notable project: </span>
                   {job.notable_project.url
                     ? <a
@@ -104,7 +104,7 @@ export default function Experience() {
                 <div className="job-notable_project-details">
                   {job.notable_project.details.map((item, index4) => {
                     return (
-                      <div key={index4} className="mb-3 job-notable_project-item">
+                      <div key={index4} className="mt-6 job-notable_project-item">
                         <p className="mb-3 ml-2 md:ml-4 lg:ml-6 txt-Montserrat--regular--italic">
                           {item.url
                             ? <a
@@ -120,14 +120,16 @@ export default function Experience() {
                         <div className="ml-4 md:ml-8 lg:ml-12 job-notable_project-item--detail">
                           <p className="mb-3 description"><span>- Description: </span>{item.description}</p>
                           <p className="mb-3 status"><span>- Status: </span>{item.status}</p>
-                          <p className="responsibilities">
-                            <span>- Responsibilities: </span>
-                            {item.responsibilities.map((res, index5) => {
-                              return (
-                                <span key={index5} className="inline-block mb-3">+ {res}</span>
-                              )
-                            })}
-                          </p>
+                          <div className="responsibilities">
+                            <p>- Responsibilities: </p>
+                            <div className="ml-2 md:ml-4 lg:ml-6">
+                              {item.responsibilities.map((res, index5) => {
+                                return (
+                                  <p key={index5} className="mt-3">+ {res}</p>
+                                )
+                              })}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     )

@@ -10,12 +10,12 @@ export default {
         "to":"myAbout"
       },
       {
-        "text":"Experience",
-        "to":"myExp"
-      },
-      {
         "text":"Skills",
         "to":"mySkills"
+      },
+      {
+        "text":"Experience",
+        "to":"myExp"
       },
       {
         "text":"Education",
@@ -43,7 +43,7 @@ export default {
     "btnScroll":"Discover More",
     "btnToCvPDF":{
       "text":"CV PDF",
-      "href":"https://drive.google.com/file/d/1xIxI6jhoQ4fEk6bPlyNo9uasa5bAspg9/view?usp=sharing"
+      "href":"https://drive.google.com/file/d/1HgMWqHsNYx_02FE2AznmGwMAV6mRjj3n/view?usp=sharing"
     }
   },
   "about":{
@@ -108,9 +108,9 @@ export default {
         "position":"Junior Web Developer & sub-PM",
         "desc":"Job description:",
         "details":[
-          "Customize theme on shopify according to customer's request or design. (HTML/CSS/JS/JQ/Liquid...)",
+          "Customize theme on shopify according to customer's request or design (HTML/CSS/JS/JQ/Liquid...).",
           "Learn, use and customize 3rd party applications provided on shopify app to fulfill the requirements of store owners.",
-          "Build private custom app on shopify to fulfill the requirements of store owners. (ReactJS, NodeJS, MongoDB...)",
+          "Build private custom app on shopify to fulfill the requirements of store owners (ReactJS, NodeJS, MongoDB...).",
           "Communicating with customers (chat/email), taking requests, estimating, pre-selling.",
           "Plan and manage small teams (3-6 persons) to execute projects."
         ],
@@ -167,7 +167,7 @@ export default {
             {
               "name": "Build a beneficial system for the company (web app)",
               "url": null,
-              "description": "build a beneficial system for the company. Integrate it with Shopify platform as the manual payment method. Manage the company’s payout and their employees’ benefits. The system includes 3 dashboards dedicated to: Admin (VDC-providing service benefits), Companies (service buyers), Partners (partners with providers who allow service use on their store)",
+              "description": "build a beneficial system for the company. Integrate it with Shopify platform as the manual payment method. Manage the company’s payout and their employees’ benefits. The system includes 3 dashboards dedicated to: Admin (VDC-providing service benefits), Companies (service buyers), Partners (partners with providers who allow service use on their store).",
               "status": "has completed the necessary features and is in use. About 30% more of the plan is continuing to be added.",
               "responsibilities": [
                 "plan and manage team (4 persons).",
@@ -186,7 +186,7 @@ export default {
               "name": "Build react native app (mobile app name \"Vision Direct Club\")",
               "url": null,
               "description": "the native app is where VDC focuses on the VDC end-user experience and synchronization of information and user records from shopify to mongodb. The purpose of unifying a place to keep the most complete data about VDC's end users. VDC's mongodb is the main database.",
-              "status": "at the moment have completed first version and released it on Apple store and Google play on October 18. Next versions are in development right now. About 30% of the original plan is being implemented",
+              "status": "at the moment have completed first version and released it on Apple store and Google play on October 18. Next versions are in development right now. About 30% of the original plan is being implemented.",
               "responsibilities": [
                 "only work as a PM like the roles in the \"web app\" above."
               ]
@@ -250,11 +250,11 @@ export default {
         "projects":[
           {
             "href":"http://thai-clone-trello.surge.sh/",
-            "alt":"React - Clone Trello"
+            "alt":"ReactJS - Clone Trello"
           },
           {
             "href":"http://thai-cv.surge.sh/",
-            "alt":"React - My CV"
+            "alt":"ReactJS - CV Online"
           }
         ]
       },
@@ -352,12 +352,12 @@ export default {
       {
         "img":"https://cdn.shopify.com/s/files/1/0585/3328/1943/files/thai-clone-trello.png?v=1666211909",
         "href":"http://thai-clone-trello.surge.sh/",
-        "alt":"React - Clone Trello"
+        "alt":"ReactJS - Clone Trello"
       },
       {
         "img":"https://cdn.shopify.com/s/files/1/0585/3328/1943/files/nguyenducthai-cv.png?v=1666211909",
         "href":"http://thai-cv.surge.sh/",
-        "alt":"React - My CV"
+        "alt":"ReactJS - CV Online"
       }
     ]
   }

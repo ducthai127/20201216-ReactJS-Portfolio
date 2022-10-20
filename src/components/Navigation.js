@@ -11,7 +11,7 @@ export default function Navigation() {
 
   return (
     <div id="myNav" className="fixed top-0 z-40 w-full">
-      <div className="flex items-center w-full px-6 py-3 lg:w-10/12 xl:w-8/12 mx-auto">
+      <div className="w-container mx-auto px-6 py-3 flex items-center">
         <ScrollLink
           to="myHeader"
           smooth={true}
