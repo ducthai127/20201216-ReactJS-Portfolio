@@ -50,7 +50,7 @@
     "title":"About Me",
     "img":"https://cdn.shopify.com/s/files/1/0585/3328/1943/files/avatar.png?v=1666211887",
     "alt":"Avatar",
-    "desc":"I am a Front-end Developer. I love making good and fancy websites for users. So I'm looking forward to working more with today's trending UI frameworks, especially with ReactJS. I hope to have the opportunity to work and learn from you in the future.",
+    "desc":"I am a Web Developer. I love making good and fancy websites for users. So I'm looking forward to working more with today's trending UI frameworks, especially with ReactJS. I hope to have the opportunity to work and learn from you in the future.",
     "infos":[
       {
         "th":"Address",
@@ -105,7 +105,7 @@
           "url":"https://2-b.io/"
         },
         "time":"01/2021 - Present",
-        "position":"Junior Web Developer & sub-PM",
+        "position":"Web Developer & sub-PM",
         "desc":"Job description:",
         "details":[
           "Customize theme on shopify according to customer's request or design (HTML/CSS/JS/JQ/Liquid...).",
@@ -200,8 +200,8 @@
           "url":"https://www.viivue.com/"
         },
         "time":"02/2019 - 12/2020",
-        "position":"Fresher Front-end Developer",
-        "desc":"Skills used in real projects:",
+        "position":"Web Developer",
+        "desc":"Job description:",
         "details":[
           "HTML/CSS skill: the design file into website.",
           "JS libraries: sliders, scrolls, animations (slick, aos, gsap)...",
@@ -240,8 +240,8 @@
           "url":"https://cybersoft.edu.vn/"
         },
         "time":"12/2018 - 01/2019",
-        "position":"Intern Front-end Developer",
-        "desc":"Skills used in the exercises:",
+        "position":"Web Developer",
+        "desc":"Job description:",
         "details":[
           "Created templates CV with: html, scss, css, javascript/jquery.",
           "Created staff management page with: webpack, js/ES6, typescript, ajax.",
